@@ -45,3 +45,15 @@ Route::prefix('users')->group(function() {
     Route::get('/delete/{id}', [UserController::class, 'UserDelete'])->name('user.delete');
 
 });
+
+// User Profile and Change Password
+
+Route::prefix('profile')->group(function() {
+
+    Route::get('/view', [UserController::class, 'ProfileView'])->name('profile.view');
+
+    
+
+});
+
+
