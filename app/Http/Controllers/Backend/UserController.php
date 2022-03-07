@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function UserView() {
-        $allData = User::all();
-        return view('backend.user.view_user');
+        $data['allData'] = User::all();
+        return view('backend.user.view_user', $data);
     }
 }
