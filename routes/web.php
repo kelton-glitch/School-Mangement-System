@@ -36,4 +36,6 @@ Route::prefix('users')->group(function() {
 
     Route::get('/add', [UserController::class, 'UserAdd'])->name('user.add');
 
+    Route::post('store', [UserController::class, 'UserStore'])->name('user.store');
+
 });
