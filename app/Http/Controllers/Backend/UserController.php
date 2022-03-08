@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function UserView() {
-        $data['allData'] = User::all();
+        $data['allData'] = User::all();     //One way to get data from the db
         return view('backend.user.view_user', $data);
     }
 
@@ -35,5 +35,10 @@ class UserController extends Controller
         );
 
         return redirect()->route('user.view')->with($notification);
+    }
+
+    public function UserEdit($id) {
+        $editData = User::find($id);    //Another way to get data from the db
+        return view('backend.user.edit_user', compact('editData'));
     }
 }
