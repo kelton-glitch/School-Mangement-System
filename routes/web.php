@@ -40,4 +40,6 @@ Route::prefix('users')->group(function() {
 
     Route::get('/edit/{id}', [UserController::class, 'UserEdit'])->name('user.edit');
 
+    Route::post('/update/{id}', [UserController::class, 'UserUpdate'])->name('user.update');
+
 });
