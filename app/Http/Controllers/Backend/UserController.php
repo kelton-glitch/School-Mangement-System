@@ -29,6 +29,11 @@ class UserController extends Controller
         $data->password = bcrypt($request->password);
         $data->save();
 
-        return redirect()->route('user.view');
+        $notification = array(
+            'message' => 'User Added Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('user.view')->with($notification);
     }
 }
