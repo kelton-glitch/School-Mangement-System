@@ -14,8 +14,8 @@
                                 <i class="text-primary mr-0 font-size-24 mdi mdi-account-multiple"></i>
                             </div>
                             <div>
-                                <p class="text-mute mt-20 mb-0 font-size-16">New Customers</p>
-                                <h3 class="text-white mb-0 font-weight-500">3400 <small class="text-success"><i class="fa fa-caret-up"></i> +2.5%</small></h3>
+                                <p class="text-mute mt-20 mb-0 font-size-16">Number Of Students</p>
+                                <h3 class="text-white mb-0 font-weight-500">{{$user_count}} <small class="text-success"><i class="fa fa-caret-up"></i> +2.5%</small></h3>
                             </div>
                         </div>
                     </div>

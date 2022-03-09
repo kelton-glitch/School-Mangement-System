@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 use Laravel\Jetstream\Rules\Role;
 
 /*
@@ -22,7 +23,8 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('admin.index');
+    $user_count = User::all()->count(); 
+    return view('admin.index', compact('user_count'));
 })->name('dashboard');
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'])->name('admin.logout');
@@ -52,6 +54,8 @@ Route::prefix('users')->group(function() {
 Route::prefix('profile')->group(function() {
 
     Route::get('/view', [ProfileController::class, 'ProfileView'])->name('profile.view');
+
+    Route::get('/edit', [ProfileController::class, 'ProfileEdit'])->name('profile.edit');
 
     
 
