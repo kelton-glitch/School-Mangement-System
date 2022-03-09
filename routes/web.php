@@ -59,6 +59,8 @@ Route::prefix('profile')->group(function() {
 
     Route::post('/update/{id}', [ProfileController::class, 'ProfileUpdate'])->name('profile.update');
 
+    Route::get('/password/view', [ProfileController::class, 'PasswordView'])->name('password.view');
+
     
 
 });
