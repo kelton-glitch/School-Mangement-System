@@ -20,7 +20,7 @@
 					<!-- Add the bg color to the header using any of the bg-* classes -->
 					<div class="widget-user-header bg-black" >
 					  <h3 class="widget-user-username">Username: {{ $user->name }}</h3>
-					  <a href="{{ route('user.add') }}" style="float: right;" class="btn btn-rounded btn-success mb-5">Edit Profile</a>
+					  <a href="{{ route('profile.edit') }}" style="float: right;" class="btn btn-rounded btn-success mb-5">Edit Profile</a>
 					  <h6 class="widget-user-desc">User Email: {{ $user->email }}</h6>
 					  <h6 class="widget-user-desc">User Role: {{ $user->usertype }}</h6>
 					  
