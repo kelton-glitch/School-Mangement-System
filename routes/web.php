@@ -57,6 +57,8 @@ Route::prefix('profile')->group(function() {
 
     Route::get('/edit', [ProfileController::class, 'ProfileEdit'])->name('profile.edit');
 
+    Route::post('/update/{id}', [ProfileController::class, 'ProfileUpdate'])->name('profile.update');
+
     
 
 });
