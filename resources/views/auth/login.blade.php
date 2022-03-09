@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{{ asset('backend/images/favicon.ico') }}">
 
-    <title>FreshDev - Log in </title> 
+    <title>FreshDev - Log in </title>
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="{{ asset('backend/css/vendors_css.css') }}">
@@ -33,14 +33,17 @@
                             <p class="text-white-50">Sign in to start your session</p>
                         </div>
                         <div class="p-30 rounded30 box-shadowed b-2 b-dashed">
-                        <form method="POST" action="{{ route('login') }}">
-            @csrf
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-transparent text-white"><i class="ti-user"></i></span>
                                         </div>
                                         <input type="email" id="email" name="email" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Email">
+                                        @error('email')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -49,6 +52,9 @@
                                             <span class="input-group-text  bg-transparent text-white"><i class="ti-lock"></i></span>
                                         </div>
                                         <input type="password" id="password" name="password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Password">
+                                        @error('password')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="row">

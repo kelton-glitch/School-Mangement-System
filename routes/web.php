@@ -61,7 +61,7 @@ Route::prefix('profile')->group(function() {
 
     Route::get('/password/view', [ProfileController::class, 'PasswordView'])->name('password.view');
 
-    
+    Route::post('/password/update', [ProfileController::class, 'PasswordUpdate'])->name('password.update');
 
 });
 
