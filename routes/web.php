@@ -89,5 +89,7 @@ Route::prefix('setups')->group(function() {
 
     Route::get('/student/year/view',[StudentYearController::class,'ViewYear'])->name('student.year.view');
 
+    Route::get('/student/year/add',[StudentYearController::class,'StudentYearAdd'])->name('student.year.add');
+
 });
 
