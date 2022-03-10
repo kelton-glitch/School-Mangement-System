@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
+use App\Models\StudentClass;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Laravel\Jetstream\Rules\Role;
@@ -24,8 +25,9 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    $user_count = User::all()->count(); 
-    return view('admin.index', compact('user_count'));
+    $user_count = User::all()->count();
+    $class_count = StudentClass::all()->count(); 
+    return view('admin.index', compact('user_count','class_count'));
 })->name('dashboard');
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'])->name('admin.logout');
@@ -79,6 +81,8 @@ Route::prefix('setups')->group(function() {
     Route::get('/student/class/edit/{id}',[StudentClassController::class, 'StudentClassEdit'])->name('student.class.edit');
 
     Route::post('student/class/update/{id}',[StudentClassController::class, 'StudentClassUpdate'])->name('update.student.class');
+
+    Route::get('/student/class/delete/{id}',[StudentClassController::class, 'StudentClassDelete'])->name('student.class.delete');
 
 });
 
