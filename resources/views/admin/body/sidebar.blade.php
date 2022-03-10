@@ -69,6 +69,7 @@
                     <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Student Class</a></li>
                     <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Student Year</a></li>
                     <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Fee Category</a></li>
+                    <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Fee Category Amount</a></li>
                     
                     
                 </ul>
