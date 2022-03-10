@@ -18,7 +18,7 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col">
-                            <form method="post" action="{{ route('password.update') }}">
+                            <form method="post" action="{{ route('store.student.class') }}">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
