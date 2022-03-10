@@ -13,4 +13,26 @@ class FeeCategoryController extends Controller
         $data['allData'] = FeeCategory::all();
         return view('backend.setup.fee_category.view_fee_cat', $data);
     }
+
+    public function FeeCategoryAdd()
+    {
+        return view('backend.setup.fee_category.add_fee_cat');
+    }
+
+    public function FeeCategoryStore(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required|unique:fee_categories,name',
+        ]);
+        $data = new FeeCategory();
+        $data->name = $request->name;
+        $data->save();
+
+        $notification = array(
+            'message' => 'Fee Category Added Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('fee.category.view')->with($notification);
+    }
 }

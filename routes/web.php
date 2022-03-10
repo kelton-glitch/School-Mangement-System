@@ -104,5 +104,9 @@ Route::prefix('setups')->group(function() {
 
     Route::get('/fee/category/view',[FeeCategoryController::class,'ViewFeeCategory'])->name('fee.category.view');
 
+    Route::get('/fee/category/add',[FeeCategoryController::class,'FeeCategoryAdd'])->name('fee.category.add');
+
+    Route::post('/fee/category/store',[FeeCategoryController::class,'FeeCategoryStore'])->name('store.fee.category');
+
 });
 
