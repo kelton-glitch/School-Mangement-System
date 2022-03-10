@@ -24,7 +24,7 @@
                     <div class="box overflow-hidden pull-up">
                         <div class="box-body">
                             <div class="icon bg-warning-light rounded w-60 h-60">
-                                <i class="text-warning mr-0 font-size-24 mdi mdi-car"></i>
+                                <i class="text-primary mr-0 font-size-24 mdi mdi-account-multiple"></i>
                             </div>
                             <div>
                                 <p class="text-mute mt-20 mb-0 font-size-16">Number Of Classes</p>
