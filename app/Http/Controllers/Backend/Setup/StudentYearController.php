@@ -17,4 +17,20 @@ class StudentYearController extends Controller
     {
         return view('backend.setup.year.add_year');
     }
+
+    public function StudentYearStore(Request $request) {
+        $validatedData = $request->validate([
+            'name' => 'required|unique:student_years,name',
+        ]);
+        $data = new StudentYear();
+        $data->name = $request->name;
+        $data->save();
+
+        $notification = array(
+            'message' => 'Student Year Added Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('student.year.view')->with($notification);
+    }
 }

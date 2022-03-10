@@ -1,6 +1,7 @@
 @extends('admin.admin_master')
 @section('admin')
 
+<!-- You Can Remove this completely -->
 
 <div class="content-wrapper">
     <div class="container-full">

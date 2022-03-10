@@ -1,6 +1,7 @@
 @extends('admin.admin_master')
 @section('admin')
 
+<!-- You Can Remove this completely -->
 
 <div class="content-wrapper">
     <div class="container-full">
@@ -41,7 +42,7 @@
                                         <tr>
                                             <td>{{ $key+1 }}</td>
                                            
-                                            <td>{{ $student->name }}</td>
+                                            <td>{{ $year->name }}</td>
                                             
                                             <td>
                                                 <a href="{{ route('student.class.edit', $year->id) }}" class="btn btn-info">Edit</a>

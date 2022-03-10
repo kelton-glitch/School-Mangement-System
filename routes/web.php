@@ -91,5 +91,7 @@ Route::prefix('setups')->group(function() {
 
     Route::get('/student/year/add',[StudentYearController::class,'StudentYearAdd'])->name('student.year.add');
 
+    Route::post('/student/year/store',[StudentYearController::class,'StudentYearStore'])->name('store.student.year');
+
 });
 
