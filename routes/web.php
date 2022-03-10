@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Models\StudentClass;
@@ -101,7 +102,7 @@ Route::prefix('setups')->group(function() {
 
     // Fee Category Routes
 
-    Route::get('/fee/category/view',[StudentYearController::class,'ViewYear'])->name('fee.category.view');
+    Route::get('/fee/category/view',[FeeCategoryController::class,'ViewFeeCategory'])->name('fee.category.view');
 
 });
 
