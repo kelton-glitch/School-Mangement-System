@@ -70,7 +70,7 @@ Route::prefix('profile')->group(function() {
 
 Route::prefix('setups')->group(function() {
 
-    Route::get('/student/class/view',[StudentClassController::class,'StudentClassView'])->name('student.class.view');
+    Route::get('/student/class/view',[StudentClassController::class,'ViewStudent'])->name('student.class.view');
 
 });
 
