@@ -65,4 +65,11 @@ Route::prefix('profile')->group(function() {
 
 });
 
+//
+
+Route::prefix('setups')->group(function() {
+    
+
+});
+
 
