@@ -99,5 +99,9 @@ Route::prefix('setups')->group(function() {
 
     Route::get('/student/year/delete/{id}',[StudentYearController::class, 'StudentYearDelete'])->name('student.year.delete');
 
+    // Fee Category Routes
+
+    Route::get('/fee/category/view',[StudentYearController::class,'ViewYear'])->name('fee.category.view');
+
 });
 
