@@ -93,5 +93,7 @@ Route::prefix('setups')->group(function() {
 
     Route::post('/student/year/store',[StudentYearController::class,'StudentYearStore'])->name('store.student.year');
 
+    Route::get('/student/year/edit/{id}',[StudentYearController::class, 'StudentYearEdit'])->name('student.year.edit');
+
 });
 

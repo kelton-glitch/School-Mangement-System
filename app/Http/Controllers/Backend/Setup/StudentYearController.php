@@ -33,4 +33,10 @@ class StudentYearController extends Controller
 
         return redirect()->route('student.year.view')->with($notification);
     }
+
+    public function StudentYearEdit($id)
+    {
+        $editData = StudentYear::find($id);
+        return view('backend.setup.year.edit_year', compact('editData'));
+    }
 }
