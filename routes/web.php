@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\Setup\StudentClassController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Laravel\Jetstream\Rules\Role;
@@ -68,7 +69,8 @@ Route::prefix('profile')->group(function() {
 //
 
 Route::prefix('setups')->group(function() {
-    
+
+    Route::get('/student/class/view',[StudentClassController::class,'StudentClassView'])->name('student.class.view');
 
 });
 
