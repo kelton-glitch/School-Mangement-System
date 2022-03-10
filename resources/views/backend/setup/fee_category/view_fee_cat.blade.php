@@ -45,8 +45,8 @@
                                             <td>{{ $fee->name }}</td>
                                             
                                             <td>
-                                                <a href="{{ route('student.year.edit', $fee->id) }}" class="btn btn-info">Edit</a>
-                                                <a href="{{ route('student.year.delete', $fee->id) }}" class="btn btn-danger" id="delete">Delete</a>
+                                                <a href="{{ route('fee.category.edit', $fee->id) }}" class="btn btn-info">Edit</a>
+                                                <a href="{{ route('fee.category.delete', $fee->id) }}" class="btn btn-danger" id="delete">Delete</a>
                                             </td>
 
                                         </tr>
