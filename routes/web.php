@@ -78,5 +78,7 @@ Route::prefix('setups')->group(function() {
 
     Route::get('/student/class/edit/{id}',[StudentClassController::class, 'StudentClassEdit'])->name('student.class.edit');
 
+    Route::post('student/class/update/{id}',[StudentClassController::class, 'StudentClassUpdate'])->name('update.student.class');
+
 });
 

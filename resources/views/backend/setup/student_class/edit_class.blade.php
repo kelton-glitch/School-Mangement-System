@@ -18,7 +18,7 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col">
-                            <form method="post" action="{{ route('store.student.class') }}">
+                            <form method="post" action="{{ route('update.student.class',$editData->id) }}">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
@@ -38,7 +38,7 @@
                                             
 
                                         <div class="text-xs-right">
-                                            <input type="submit" class="btn btn-rounded btn-info mb-5" value="Submit">
+                                            <input type="submit" class="btn btn-rounded btn-info mb-5" value="Update">
                                         </div>
                             </form>
 
