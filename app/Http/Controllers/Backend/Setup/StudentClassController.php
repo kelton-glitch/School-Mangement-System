@@ -32,4 +32,10 @@ class StudentClassController extends Controller
 
         return redirect()->route('student.class.view')->with($notification);
     }
+
+    public function StudentClassEdit($id)
+    {
+        $editData = StudentClass::find($id);
+        return view('backend.setup.student_class.edit_class', compact('editData'));
+    }
 }
