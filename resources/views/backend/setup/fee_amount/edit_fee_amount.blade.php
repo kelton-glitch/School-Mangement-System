@@ -44,6 +44,11 @@
                                             </div>
                                         </div> <!-- End Form Group -->
 
+                                        @foreach ($editData as $edit)
+                                        <div class="delete_whole_extra_item_add" id="delete_whole_extra_item_add">
+                                            
+                                        
+
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <div class="form-group">
@@ -52,7 +57,7 @@
                                                         <select name="class_id[]" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Select Student Class</option>
                                                             @foreach ($classes as $class)
-                                                            <option value="{{ $class->id }}">{{ $class->name }}</option>
+                                                            <option value="{{ $class->id }}"{{ ($edit->class_id == $class->id)?"selected": "" }}>{{ $class->name }}</option>
 
                                                             @endforeach
 
@@ -66,7 +71,7 @@
                                                 <div class="form-group">
                                                     <h5>Amount <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="amount[]" class="form-control">
+                                                        <input type="text" name="amount[]" value="{{ $edit->amount }}" class="form-control">
 
 
                                                     </div>
@@ -76,12 +81,15 @@
 
                                             <div class="col-md-2" style="padding-top: 25px;">
                                                 <span class="btn btn-success addeventmore"><i class="fa fa-plus-circle"></i></span>
+                                                <span class="btn btn-danger removeeventmore"><i class="fa fa-minus-circle"></i></span>
                                             </div> <!-- End col-md-2 -->
                                         </div> <!-- End Row -->
+                                        </div> <!-- End Remove Delete -->
+                                        @endforeach 
                                         </div>  <!-- End add_item -->
 
                                         <div class="text-xs-right">
-                                            <input type="submit" class="btn btn-rounded btn-info mb-5" value="Submit">
+                                            <input type="submit" class="btn btn-rounded btn-info mb-5" value="Update">
                                         </div>
                             </form>
                         </div>
