@@ -123,6 +123,9 @@ Route::prefix('setups')->group(function() {
 
     Route::post('fee/amount/store',[FeeAmountController::class,'StoreFeeAmount'])->name('store.fee.amount');
 
+    Route::get('/fee/amount/edit/{fee_category_id}',[FeeAmountController::class,'EditFeeAmount'])->name('fee.amount.edit');
+
+
 
 
 });
