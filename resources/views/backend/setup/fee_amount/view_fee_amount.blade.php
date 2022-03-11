@@ -42,7 +42,7 @@
                                         <tr>
                                             <td>{{ $key+1 }}</td>
 
-                                            <td>{{ $amount->fee_category_id }}</td>
+                                            <td>{{ $amount->class_id }}</td>
 
                                             <td>
                                                 <a href="{{ route('fee.category.edit', $amount->id) }}" class="btn btn-info">Edit</a>

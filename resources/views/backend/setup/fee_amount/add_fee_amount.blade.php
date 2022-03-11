@@ -19,7 +19,7 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col">
-                            <form method="post" action="{{ route('store.fee.category') }}">
+                            <form method="post" action="{{ route('store.fee.amount') }}">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
@@ -50,7 +50,7 @@
                                                     <h5>Student Class <span class="text-danger">*</span></h5>
                                                     <div class="controls">
                                                         <select name="class_id[]" required="" class="form-control">
-                                                            <option value="" selected="" disabled="">Select Fee Category</option>
+                                                            <option value="" selected="" disabled="">Select Student Class</option>
                                                             @foreach ($classes as $class)
                                                             <option value="{{ $class->id }}">{{ $class->name }}</option>
 
@@ -109,7 +109,7 @@
                                                     <h5>Student Class <span class="text-danger">*</span></h5>
                                                     <div class="controls">
                                                         <select name="class_id[]" required="" class="form-control">
-                                                            <option value="" selected="" disabled="">Select Fee Category</option>
+                                                            <option value="" selected="" disabled="">Select Student Class</option>
                                                             @foreach ($classes as $class)
                                                             <option value="{{ $class->id }}">{{ $class->name }}</option>
 
