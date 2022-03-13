@@ -37,15 +37,10 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($detailsData as $key => $detail )
-
-
                                         <tr>
                                             <td>{{ $key+1 }}</td>
-
                                             <td>{{ $detail->class_id }}</td>
-
                                             <td>{{ $detail->amount }}</td>
-
                                         </tr>
                                         @endforeach
 
