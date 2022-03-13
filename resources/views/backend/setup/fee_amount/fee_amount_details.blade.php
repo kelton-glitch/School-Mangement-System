@@ -23,9 +23,10 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
+                            <h4><strong>Fee Category : </strong>{{ $detailsData['0']['fee_category']['name'] }}</h4>
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped">
-                                    <thead>
+                                    <thead class="thead-light">
                                         <tr>
                                             <th width="5%">SL</th>
 
@@ -39,7 +40,7 @@
                                         @foreach ($detailsData as $key => $detail )
                                         <tr>
                                             <td>{{ $key+1 }}</td>
-                                            <td>{{ $detail->class_id }}</td>
+                                            <td>{{ $detail['student_class']['name'] }}</td>
                                             <td>{{ $detail->amount }}</td>
                                         </tr>
                                         @endforeach
