@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\Setup\FeeAmountController;
 use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
+use App\Http\Controllers\Backend\Student\StudentRegController;
 use App\Models\StudentClass;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -129,7 +130,13 @@ Route::prefix('setups')->group(function() {
 
     Route::get('/fee/amount/details/{fee_category_id}',[FeeAmountController::class,'FeeAmountDetails'])->name('fee.amount.details');
 
+});
 
+
+
+Route::prefix('students')->group(function() {
+
+    Route::get('/reg/view', [StudentRegController::class, 'StudentRegView'])->name('student.registration.view');
 
 
 
