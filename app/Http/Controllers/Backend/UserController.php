@@ -23,10 +23,13 @@ class UserController extends Controller
             'name' => 'required',
         ]);
         $data = new User();
-        $data->usertype = $request->usertype;
+        $code = rand(00000000,99999999);
+        $data->usertype = 'Admin';
+        $data->role = $request->role;
         $data->name = $request->name;
         $data->email = $request->email;
-        $data->password = bcrypt($request->password);
+        $data->password = bcrypt($code);
+        $data->code = $code;
         $data->save();
 
         $notification = array(
@@ -44,9 +47,10 @@ class UserController extends Controller
 
     public function UserUpdate(Request $request, $id) {
         $data = User::find($id);
-        $data->usertype = $request->usertype;
+        
         $data->name = $request->name;
         $data->email = $request->email;
+        $data->role = $request->role;
         $data->save();
 
         $notification = array(
