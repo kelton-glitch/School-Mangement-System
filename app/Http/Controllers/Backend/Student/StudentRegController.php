@@ -15,6 +15,8 @@ class StudentRegController extends Controller
 {
     public function StudentRegView()
     {
+        $data['years'] = StudentYear::all();
+        $data['classes'] = StudentClass::all();
         $data['allData'] = AssignStudent::all();
         return view('backend.student.student_reg.student_view', $data);
     }
@@ -23,7 +25,6 @@ class StudentRegController extends Controller
     {
         $data['years'] = StudentYear::all();
         $data['classes'] = StudentClass::all();
-        $data['years'] = StudentYear::all();
         return view('backend.student.student_reg.student_add', $data);
     }
 
