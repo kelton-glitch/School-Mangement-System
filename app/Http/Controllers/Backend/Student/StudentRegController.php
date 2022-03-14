@@ -23,4 +23,9 @@ class StudentRegController extends Controller
         $data['years'] = StudentYear::all();
         return view('backend.student.student_reg.student_add', $data);
     }
+
+    public function StudentRegStore(Request $request)
+    {
+        # code...
+    }
 }

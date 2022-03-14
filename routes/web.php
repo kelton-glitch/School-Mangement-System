@@ -140,6 +140,9 @@ Route::prefix('students')->group(function() {
 
     Route::get('/reg/add', [StudentRegController::class, 'StudentRegAdd'])->name('student.registration.add');
 
+    Route::post('/reg/store', [StudentRegController::class, 'StudentRegStore'])->name('store.student.registration');
+
+
 
 
 

@@ -24,7 +24,7 @@
                                 <div class="row">
                                     <div class="col-12">
 
-                                        
+
 
 
 
@@ -34,7 +34,7 @@
                                                 <div class="form-group">
                                                     <h5>User Name <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="name" class="form-control" value="{{ $editData->name }}"  required="">
+                                                        <input type="text" name="name" class="form-control" value="{{ $editData->name }}" required="">
 
                                                     </div>
 
@@ -42,15 +42,15 @@
                                             </div> <!-- End col 6 -->
                                             <div class="col-md-6">
 
-                                            <div class="form-group">
+                                                <div class="form-group">
                                                     <h5>User Email <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="email" name="email" class="form-control" value="{{ $editData->email }}"  required="">
+                                                        <input type="email" name="email" class="form-control" value="{{ $editData->email }}" required="">
 
                                                     </div>
 
                                                 </div>
-                                                
+
                                             </div> <!-- End col 6 -->
                                         </div> <!-- End row -->
 
@@ -61,7 +61,7 @@
                                                 <div class="form-group">
                                                     <h5>User Mobile <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="mobile" class="form-control" value="{{ $editData->mobile }}"  required="">
+                                                        <input type="text" name="mobile" class="form-control" value="{{ $editData->mobile }}" required="">
 
                                                     </div>
 
@@ -69,15 +69,15 @@
                                             </div> <!-- End col 6 -->
                                             <div class="col-md-6">
 
-                                            <div class="form-group">
+                                                <div class="form-group">
                                                     <h5>User Address <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="address" class="form-control" value="{{ $editData->address }}"  required="">
+                                                        <input type="text" name="address" class="form-control" value="{{ $editData->address }}" required="">
 
                                                     </div>
 
                                                 </div>
-                                                
+
                                             </div> <!-- End col 6 -->
                                         </div> <!-- End row -->
 
@@ -107,8 +107,8 @@
 
                                                 </div>
                                                 @php
-                    $user = DB::table('users')->where('id', Auth::user()->id)->first();
-                @endphp
+                                                $user = DB::table('users')->where('id', Auth::user()->id)->first();
+                                                @endphp
 
                                                 <div class="form-group">
 
@@ -144,11 +144,11 @@
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('#image').change(function(e){
+    $(document).ready(function() {
+        $('#image').change(function(e) {
             var reader = new FileReader();
-            reader.onload = function(e){
-                $('#showImage').attr('src',e.target.result);
+            reader.onload = function(e) {
+                $('#showImage').attr('src', e.target.result);
             }
             reader.readAsDataURL(e.target.files['0']);
         });

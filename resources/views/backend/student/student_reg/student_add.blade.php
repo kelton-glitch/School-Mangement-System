@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- You Can Remove this completely -->
 
@@ -19,7 +20,7 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col">
-                            <form method="post" action="{{ route('store.student.year') }}">
+                            <form method="post" action="{{ route('store.student.registration') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
@@ -139,7 +140,7 @@
                                                             <option value="{{ $year->id }}">{{ $year->name }}</option>
 
                                                             @endforeach
-                                                            
+
 
                                                         </select>
                                                     </div>
@@ -162,17 +163,44 @@
                                                             <option value="{{ $class->id }}">{{ $class->name }}</option>
 
                                                             @endforeach
-                                                            
+
 
                                                         </select>
                                                     </div>
                                                 </div>
 
+
+
+                                            </div> <!-- End Col-md-4 -->
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Profile Image </h5>
+                                                    <div class="controls">
+                                                        <input type="file" name="image" class="form-control" id="image">
+
+                                                    </div>
+
+                                                </div>
+                                            </div> <!-- End Col-md-4 -->
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+
+                                                    <div class="controls">
+                                                        <img id="showImage" src="{{ url('upload/no_image.jpg') }}" style="width:100px; width:100px; border:1px solid #000" alt="">
+
+                                                    </div>
+
+                                                </div>
                                             </div> <!-- End Col-md-4 -->
 
 
 
+
                                         </div> <!-- End 4th Row -->
+
+
 
 
 
@@ -196,6 +224,18 @@
 
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#image').change(function(e) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#showImage').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(e.target.files['0']);
+        });
+    });
+</script>
 
 
 @endsection
