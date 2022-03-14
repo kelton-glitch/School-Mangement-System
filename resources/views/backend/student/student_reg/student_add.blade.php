@@ -134,7 +134,7 @@
                                                 <div class="form-group">
                                                     <h5>Year <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="gender" id="gender" required="" class="form-control">
+                                                        <select name="year_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Select Year</option>
                                                             @foreach ($years as $year)
                                                             <option value="{{ $year->id }}">{{ $year->name }}</option>
@@ -157,7 +157,7 @@
                                                 <div class="form-group">
                                                     <h5>Class <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="gender" id="gender" required="" class="form-control">
+                                                        <select name="class_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Select Class</option>
                                                             @foreach ($classes as $class)
                                                             <option value="{{ $class->id }}">{{ $class->name }}</option>

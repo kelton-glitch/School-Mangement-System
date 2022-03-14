@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Student;
 
 use App\Http\Controllers\Controller;
 use App\Models\AssignStudent;
+use App\Models\DiscountStudent;
 use App\Models\StudentClass;
 use App\Models\StudentYear;
 use Illuminate\Http\Request;
@@ -59,8 +60,9 @@ class StudentRegController extends Controller
                     }
 
                 } //End Else
+            } //End 1st If
 
-                $final_id_no = $checkYear.$id_no;
+            $final_id_no = $checkYear.$id_no;
                 $user = new User();
                 $code = rand(00000000,99999999);
                 $user->id_no = $final_id_no;
@@ -82,8 +84,26 @@ class StudentRegController extends Controller
                     $user['image'] = $filename;
                 }
                 $user->save();
-                
-            } //End 1st If
+
+                $assign_student = new AssignStudent();
+                $assign_student->student_id = $user->id;
+                $assign_student->year_id = $request->year_id;
+                $assign_student->class_id = $request->class_id;
+                $assign_student->save();
+
+                $discount_student = new DiscountStudent();
+                $discount_student->assign_student_id = $assign_student->id;
+                $discount_student->fee_category_id = '1';
+                $discount_student->discount = $request->discount;
+                $discount_student->save();
+
         });
+
+        $notification = array(
+            'message' => 'Student Registered Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('student.registration.view')->with($notification);
     } // End Method
 }
