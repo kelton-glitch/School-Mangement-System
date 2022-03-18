@@ -10,8 +10,6 @@ use App\Models\StudentYear;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
-use Dompdf\Adapter\PDFLib;
-use niklasravnsborg\LaravelPdf\Facades\Pdf as FacadesPdf;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 class StudentRegController extends Controller
 {
@@ -246,6 +244,8 @@ class StudentRegController extends Controller
 	return $pdf->download('document.pdf');
 
     }
+
+
 
 
 
