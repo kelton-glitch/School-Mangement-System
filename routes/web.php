@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Student\StudentRegController;
 use App\Http\Controllers\Backend\Student\StudentRollController;
+use App\Models\AssignStudent;
 use App\Models\StudentClass;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -30,7 +31,7 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    $user_count = User::all()->count();
+    $user_count = AssignStudent::all()->count();
     $class_count = StudentClass::all()->count(); 
     return view('admin.index', compact('user_count','class_count'));
 })->name('dashboard');
@@ -160,6 +161,9 @@ Route::prefix('students')->group(function() {
     Route::get('/roll/generate/view', [StudentRollController::class, 'StudentRollView'])->name('roll.generate.view');
 
     Route::get('/roll/getstudents', [StudentRollController::class, 'GetStudents'])->name('student.registration.getstudents');
+
+    Route::post('/roll/generate/store', [StudentRollController::class, 'StudentRollStore'])->name('roll.generate.store');
+
 
 
  

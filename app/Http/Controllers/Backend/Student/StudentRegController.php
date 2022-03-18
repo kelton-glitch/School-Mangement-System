@@ -57,6 +57,7 @@ class StudentRegController extends Controller
     		}elseif ($studentId < 1000) {
     			$id_no = '0'.$studentId;
     		}
+			
     	}else{
      $student = User::where('usertype','Student')->orderBy('id','DESC')->first()->id;
      	$studentId = $student+1;
