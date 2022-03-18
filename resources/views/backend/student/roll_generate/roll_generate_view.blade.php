@@ -64,7 +64,7 @@
 
                                 </div><!--  end row -->
 
-                                ///////// Roll generate table /////////
+                                <!-- ///////// Roll generate table ///////// -->
 
                                 <div class="row d-none" id="roll-generate">
                                     <div class="col-md-12">
