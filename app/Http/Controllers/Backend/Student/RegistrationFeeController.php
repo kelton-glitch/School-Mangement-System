@@ -61,7 +61,7 @@ class RegistrationFeeController extends Controller
     	 	$discounttablefee = $discount/100*$originalfee;
     	 	$finalfee = (float)$originalfee-(float)$discounttablefee;
 
-    	 	$html[$key]['tdsource'] .='<td>'.$finalfee.'$'.'</td>';
+    	 	$html[$key]['tdsource'] .='<td>'.'XAF '.$finalfee.'</td>';
     	 	$html[$key]['tdsource'] .='<td>';
     	 	$html[$key]['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="PaySlip" target="_blanks" href="'.route("student.registration.fee.payslip").'?class_id='.$v->class_id.'&student_id='.$v->student_id.'">Fee Slip</a>';
     	 	$html[$key]['tdsource'] .= '</td>';
