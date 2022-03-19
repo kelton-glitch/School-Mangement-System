@@ -242,7 +242,7 @@ class StudentRegController extends Controller
 
     $pdf = PDF::loadView('backend.student.student_reg.student_details_pdf', $data);
 	
-	return $pdf->download('document.pdf');
+	return $pdf->stream('document.pdf');
 
     }
 
