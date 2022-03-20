@@ -28,11 +28,10 @@
 <table id="customers">
   <tr>
    <td><h2>
-  <?php $image_path = '/upload/easyschool.png'; ?>
-  <img src="{{ public_path() . $image_path }}" width="200" height="100">
+  FreshDev School
 
     </h2></td>
-    <td><h2>FreshDev School</h2>
+    <td><h2>FreshDev School Receipt</h2>
 <p>School Address</p>
 <p>Phone : 343434343434</p>
 <p>Email : support@freshdev.com</p>

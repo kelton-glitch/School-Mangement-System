@@ -26,13 +26,12 @@
 
 
 <table id="customers">
-  <tr>
-    <td><h2>
-  <?php $image_path = '/upload/easyschool.png'; ?>
-  <img src="{{ public_path() . $image_path }}" width="200" height="100">
+  <tr> 
+  <td><h2>
+  FreshDev School
 
     </h2></td>
-    <td><h2>Easy School ERP</h2>
+    <td><h2>FreshDev School Receipt</h2>
 <p>School Address</p>
 <p>Phone : 343434343434</p>
 <p>Email : support@easylerningbd.com</p>
@@ -93,7 +92,7 @@ $originalfee = $registrationfee->amount;
   <tr>
     <td>7</td>
     <td><b>Registration Fee</b></td>
-    <td>{{ $originalfee }} $</td>
+    <td>XAF {{ $originalfee }}</td>
   </tr>
   <tr>
     <td>8</td>
