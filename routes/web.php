@@ -173,7 +173,14 @@ Route::prefix('students')->group(function() {
 
     Route::get('/reg/fee/payslip', [RegistrationFeeController::class, 'RegFeePayslip'])->name('student.registration.fee.payslip');
 
+// User Profile and Change Password
 
+Route::prefix('employees')->group(function() {
+
+    Route::get('/view', [ProfileController::class, 'ProfileView'])->name('profile.view');
+
+    
+});
 
 
  
