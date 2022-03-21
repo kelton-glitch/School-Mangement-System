@@ -74,6 +74,8 @@
                     <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Student Year</a></li>
                     <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Fee Category</a></li>
                     <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Fee Category Amount</a></li>
+                    <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Exam Type</a></li>
+
                     
                     
                 </ul>
@@ -108,7 +110,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Employee Registration</a></li>
+                    <li><a href="{{ route('employee.registration.view') }}"><i class="ti-more"></i>Employee Registration</a></li>
 
   
                 </ul>

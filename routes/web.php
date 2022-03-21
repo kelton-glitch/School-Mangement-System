@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\Employee\EmployeeRegController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\Setup\FeeAmountController;
@@ -177,7 +178,7 @@ Route::prefix('students')->group(function() {
 
 Route::prefix('employees')->group(function() {
 
-    Route::get('/view', [ProfileController::class, 'ProfileView'])->name('profile.view');
+    Route::get('/reg/employee/view', [EmployeeRegController::class, 'ProfileView'])->name('employee.registration.view');
 
     
 });
