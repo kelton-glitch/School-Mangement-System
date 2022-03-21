@@ -232,7 +232,7 @@ Route::prefix('students')->group(function () {
 
 });
 
-/// Employee Registration Routes
+// Employee Registration Routes
 Route::prefix('employees')->group(function(){
 
     Route::get('reg/employee/view', [EmployeeRegController::class, 'EmployeeView'])->name('employee.registration.view');
