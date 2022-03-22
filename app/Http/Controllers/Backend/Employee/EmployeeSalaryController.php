@@ -16,6 +16,7 @@ use DB;
 use PDF;
 
 use App\Models\Designation;
+use App\Models\EmployeeSalaryLog;
 use App\Models\EmployeeSallaryLog;
 
 class EmployeeSalaryController extends Controller
@@ -40,7 +41,7 @@ class EmployeeSalaryController extends Controller
     	$user->salary = $present_salary;
     	$user->save();
 
-    	$salaryData = new EmployeeSallaryLog();
+    	$salaryData = new EmployeeSalaryLog();
     	$salaryData->employee_id = $id;
     	$salaryData->previous_salary = $previous_salary;
     	$salaryData->increment_salary = $request->increment_salary;
@@ -60,7 +61,7 @@ class EmployeeSalaryController extends Controller
 
     public function SalaryDetails($id){
     	$data['details'] = User::find($id);
-    	$data['salary_log'] = EmployeeSallaryLog::where('employee_id',$data['details']->id)->get();
+    	$data['salary_log'] = EmployeeSalaryLog::where('employee_id',$data['details']->id)->get();
     	//dd($data['salary_log']->toArray());
     	return view('backend.employee.employee_salary.employee_salary_details',$data);
 
