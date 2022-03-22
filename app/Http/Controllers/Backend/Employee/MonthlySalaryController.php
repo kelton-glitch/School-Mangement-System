@@ -10,13 +10,11 @@ use App\Models\DiscountStudent;
 
 use App\Models\StudentYear;
 use App\Models\StudentClass;
-use App\Models\StudentGroup;
-use App\Models\StudentShift;
 use Illuminate\Support\Facades\DB;
 use Barryvdh\DomPDF\PDF;
 
 use App\Models\Designation;
-use App\Models\EmployeeSallaryLog;
+use App\Models\EmployeeSalaryLog;
 
 use App\Models\EmployeeAttendance;
 
