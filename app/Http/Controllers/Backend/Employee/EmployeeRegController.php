@@ -10,7 +10,7 @@ use App\Models\DiscountStudent;
 
 use App\Models\StudentYear;
 use App\Models\StudentClass;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 
