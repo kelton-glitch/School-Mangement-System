@@ -37,9 +37,10 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    $user_count = AssignStudent::all()->count();
+    $user_count = User::all()->count();
+    $student_count = AssignStudent::all()->count();
     $class_count = StudentClass::all()->count();
-    return view('admin.index', compact('user_count', 'class_count'));
+    return view('admin.index', compact('student_count', 'class_count', 'user_count'));
 })->name('dashboard');
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'])->name('admin.logout');
