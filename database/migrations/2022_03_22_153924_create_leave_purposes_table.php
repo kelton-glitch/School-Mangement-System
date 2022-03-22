@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmployeeLeavesTable extends Migration
+class CreateLeavePurposesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateEmployeeLeavesTable extends Migration
      */
     public function up()
     {
-        Schema::create('employee_leaves', function (Blueprint $table) {
+        Schema::create('leave_purposes', function (Blueprint $table) {
             $table->id();
-            $table->integer('employee_id')->comment('employee_id=user_id');
-            $table->integer('leave_purpose_id');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateEmployeeLeavesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employee_leaves');
+        Schema::dropIfExists('leave_purposes');
     }
 }

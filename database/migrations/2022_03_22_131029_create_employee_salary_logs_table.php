@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateEmployeeSallaryLogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('employee_salary_logs', function (Blueprint $table) {
             $table->id();
+            $table->integer('employee_id')->comment('employee_id=User_id');
+            $table->integer('previous_salary')->nullable();
+            $table->integer('present_salary')->nullable();
+            $table->integer('increment_salary')->nullable();
+            $table->date('effected_salary')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employee_salary_logs');
+        Schema::dropIfExists('employee_sallary_logs');
     }
-};
+}
