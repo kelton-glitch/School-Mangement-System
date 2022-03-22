@@ -15,6 +15,7 @@ use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 
 use App\Models\Designation;
+use App\Models\EmployeeSalaryLog;
 use App\Models\EmployeeSallaryLog;
 
 class EmployeeRegController extends Controller
@@ -90,7 +91,7 @@ class EmployeeRegController extends Controller
     	}
  	    $user->save();
 
-          $employee_salary = new EmployeeSallaryLog();
+          $employee_salary = new EmployeeSalaryLog();
           $employee_salary->employee_id = $user->id;
           $employee_salary->effected_salary = date('Y-m-d',strtotime($request->join_date));
           $employee_salary->previous_salary = $request->salary;
