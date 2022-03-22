@@ -12,8 +12,8 @@ use App\Models\StudentYear;
 use App\Models\StudentClass;
 use App\Models\StudentGroup;
 use App\Models\StudentShift;
-use DB;
-use PDF;
+use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\PDF;
 
 use App\Models\Designation;
 use App\Models\EmployeeSallaryLog;
@@ -81,7 +81,7 @@ class MonthlySalaryController extends Controller
     $data['details'] = EmployeeAttendance::with(['user'])->where($where)->where('employee_id',$id->employee_id)->get();	 
 
     $pdf = PDF::loadView('backend.employee.monthly_salary.monthly_salary_pdf', $data);
-	$pdf->SetProtection(['copy', 'print'], '', 'pass');
+	
 	return $pdf->stream('document.pdf');
 
   	}
