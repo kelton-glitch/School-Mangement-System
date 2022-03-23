@@ -48,12 +48,12 @@
                                             <td> {{ $value->mobile }}</td>
                                             <td> {{ $value->gender }}</td>
                                             <td> {{ date('d-m-Y',strtotime($value->join_date))  }}</td>
-                                            <td> {{ $value->salary }}</td>
+                                            <td>XAF {{ $value->salary }}</td>
 
                                             <td>
                                                 <a title="Increment" href="{{ route('employee.salary.increment',$value->id) }}" class="btn btn-info"> <i class="fa fa-plus-circle"></i></a>
 
-                                                <a title="Details" target="_blank" href="{{ route('employee.salary.details',$value->id) }}" class="btn btn-danger"><i class="fa fa-eye"></i></a>
+                                                <a title="Details" target="_blank" href="{{ route('employee.salary.details',$value->id) }}" class="btn btn-dark"><i class="fa fa-eye"></i></a>
 
                                             </td>
 

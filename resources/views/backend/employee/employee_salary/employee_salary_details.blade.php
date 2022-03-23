@@ -42,9 +42,9 @@
                                         @foreach($salary_log as $key => $log )
                                         <tr>
                                             <td>{{ $key+1 }}</td>
-                                            <td> {{ $log->previous_salary }}</td>
-                                            <td> {{ $log->increment_salary }}</td>
-                                            <td> {{ $log->present_salary }}</td>
+                                            <td>XAF {{ $log->previous_salary }}</td>
+                                            <td>XAF {{ $log->increment_salary }}</td>
+                                            <td>XAF {{ $log->present_salary }}</td>
                                             <td> {{ $log->effected_salary }}</td>
 
 

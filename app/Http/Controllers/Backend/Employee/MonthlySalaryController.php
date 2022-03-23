@@ -48,7 +48,7 @@ class MonthlySalaryController extends Controller
     	 	$color = 'success';
     	 	$html[$key]['tdsource']  = '<td>'.($key+1).'</td>';
     	 	$html[$key]['tdsource'] .= '<td>'.$attend['user']['name'].'</td>';
-    	 	$html[$key]['tdsource'] .= '<td>'.$attend['user']['salary'].'</td>';
+    	 	$html[$key]['tdsource'] .= '<td>'.'XAF '.$attend['user']['salary'].'</td>';
     	 	 
     	 	
     	 	$salary = (float)$attend['user']['salary'];
@@ -56,7 +56,7 @@ class MonthlySalaryController extends Controller
     	 	$totalsalaryminus = (float)$absentcount*(float)$salaryperday;
     	 	$totalsalary = (float)$salary-(float)$totalsalaryminus;
 
-    	 	$html[$key]['tdsource'] .='<td>'.$totalsalary.'$'.'</td>';
+    	 	$html[$key]['tdsource'] .='<td>'.'XAF '.$totalsalary.'</td>';
     	 	$html[$key]['tdsource'] .='<td>';
     	 	$html[$key]['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="PaySlip" target="_blanks" href="'.route("employee.monthly.salary.payslip",$attend->employee_id).'">Fee Slip</a>';
     	 	$html[$key]['tdsource'] .= '</td>';

@@ -50,13 +50,13 @@
                                             <td> {{ $employee->mobile }}</td>
                                             <td> {{ $employee->gender }}</td>
                                             <td> {{ $employee->join_date }}</td>
-                                            <td> {{ $employee->salary }}</td>
+                                            <td>XAF {{ $employee->salary }}</td>
                                             @if(Auth::user()->role == "Admin")
                                             <td> {{ $employee->code }}</td>
                                             @endif
                                             <td>
                                                 <a href="{{ route('employee.registration.edit',$employee->id) }}" class="btn btn-info">Edit</a>
-                                                <a target="_blank" href="{{ route('employee.registration.details',$employee->id) }}" class="btn btn-danger">Details</a>
+                                                <a target="_blank" href="{{ route('employee.registration.details',$employee->id) }}" class="btn btn-dark">Details</a>
 
                                             </td>
 
