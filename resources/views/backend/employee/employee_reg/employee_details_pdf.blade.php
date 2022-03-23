@@ -46,10 +46,10 @@
                 </h2>
             </td>
             <td>
-                <h2>Easy School ERP</h2>
+                <h2>FreshDev Employee</h2>
                 <p>School Address</p>
                 <p>Phone : 343434343434</p>
-                <p>Email : support@easylerningbd.com</p>
+                <p>Email : support@freshdev.com</p>
                 <p> <b> Employee Registration Page </b> </p>
             </td>
         </tr>
@@ -103,12 +103,6 @@
             <td>{{ $details->gender }}</td>
         </tr>
 
-        <tr>
-            <td>9</td>
-            <td><b>Religion</b></td>
-            <td>{{ $details->religion }}</td>
-        </tr>
-
 
         <tr>
             <td>10</td>
@@ -128,7 +122,7 @@
         <tr>
             <td>13</td>
             <td><b>Employee Slaray </b></td>
-            <td>{{ $details->salary }}</td>
+            <td>XAF {{ $details->salary }}</td>
         </tr>
 
 

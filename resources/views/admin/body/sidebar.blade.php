@@ -25,7 +25,7 @@
 
             <li class="{{ ($route == 'dashboard')?'active':'' }}">
                 <a href="{{ route('dashboard') }}">
-                    <i data-feather="pie-chart"></i>
+                    <i data-feather="home"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
@@ -35,7 +35,7 @@
            
             <li class="treeview {{ ($prefix == '/users')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="message-circle"></i>
+                    <i data-feather="user-plus"></i>
                     <span>Manage User</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
@@ -50,7 +50,7 @@
 
             <li class="treeview {{ ($prefix == '/profile')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="mail"></i> <span>Manage Profile</span>
+                    <i data-feather="user"></i> <span>Manage Profile</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -64,7 +64,7 @@
 
             <li class="treeview {{ ($prefix == '/setups')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="mail"></i> <span>Setup Management</span>
+                    <i data-feather="briefcase"></i> <span>Setup Management</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -89,7 +89,7 @@
 
             <li class="treeview {{ ($prefix == '/students')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="mail"></i> <span>Student Management</span>
+                    <i data-feather="clipboard"></i> <span>Student Management</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>

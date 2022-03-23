@@ -16,7 +16,6 @@ use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 use App\Models\Designation;
 use App\Models\EmployeeSalaryLog;
-use App\Models\EmployeeSallaryLog;
 
 class EmployeeRegController extends Controller
 {
@@ -67,7 +66,7 @@ class EmployeeRegController extends Controller
 
     	$final_id_no = $checkYear.$id_no;
     	$user = new User();
-    	$code = rand(0000,9999);
+    	$code = rand(00000000,99999999);
     	$user->id_no = $final_id_no;
     	$user->password = bcrypt($code);
     	$user->usertype = 'employee';
@@ -132,7 +131,6 @@ class EmployeeRegController extends Controller
     	$user->mobile = $request->mobile;
     	$user->address = $request->address;
     	$user->gender = $request->gender;
-    	$user->religion = $request->religion;
     	 
     	$user->designation_id = $request->designation_id;
     	$user->dob = date('Y-m-d',strtotime($request->dob));

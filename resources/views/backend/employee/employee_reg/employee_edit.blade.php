@@ -131,27 +131,7 @@
 
                                             <div class="col-md-4">
 
-                                                <div class="form-group">
-                                                    <h5>Religion <span class="text-danger">*</span></h5>
-                                                    <div class="controls">
-                                                        <select name="religion" id="religion" required="" class="form-control">
-                                                            <option value="" selected="" disabled="">Select Religion</option>
-                                                            <option value="Islam" {{ ($editData->religion == 'Islam')? 'selected': '' }}>Islam</option>
-                                                            <option value="Hindu" {{ ($editData->religion == 'Hindu')? 'selected': '' }}>Hindu</option>
-                                                            <option value="Christan" {{ ($editData->religion == 'Christan')? 'selected': '' }}>Christan</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                            </div> <!-- End Col md 4 -->
-
-
-
-
-                                            <div class="col-md-4">
-
-                                                <div class="form-group">
+                                            <div class="form-group">
                                                     <h5>Date of Birth <span class="text-danger">*</span></h5>
                                                     <div class="controls">
                                                         <input type="date" name="dob" class="form-control" required="" value="{{ $editData->dob }}">
@@ -161,9 +141,11 @@
                                             </div> <!-- End Col md 4 -->
 
 
+
+
                                             <div class="col-md-4">
 
-                                                <div class="form-group">
+                                            <div class="form-group">
                                                     <h5>Designation <span class="text-danger">*</span></h5>
                                                     <div class="controls">
                                                         <select name="designation_id" required="" class="form-control">
@@ -179,6 +161,12 @@
                                             </div> <!-- End Col md 4 -->
 
 
+                                            <!-- <div class="col-md-4">
+                                                
+
+                                            </div> End Col md 4 -->
+
+
                                         </div> <!-- End 3rd Row -->
 
 
@@ -187,7 +175,7 @@
                                         <div class="row">
                                             <!-- 4TH Row -->
 
-                                            @if(!@editData)
+                                            @if(!@$editData)
                                             <div class="col-md-3">
 
                                                 <div class="form-group">
@@ -201,7 +189,7 @@
                                             @endif
 
 
-                                            @if(!@editData)
+                                            @if(!@$editData)
                                             <div class="col-md-3">
 
                                                 <div class="form-group">

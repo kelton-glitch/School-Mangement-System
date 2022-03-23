@@ -11,8 +11,7 @@ use App\Models\DiscountStudent;
 use App\Models\StudentYear;
 use App\Models\StudentClass;
 use Illuminate\Support\Facades\DB;
-use Barryvdh\DomPDF\PDF;
-
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use App\Models\Designation;
 use App\Models\EmployeeSalaryLog;
 
