@@ -11,7 +11,7 @@ use App\Models\AccountStudentFee;
 
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
-class ProfiteController extends Controller
+class ProfitController extends Controller
 {
     public function MonthlyProfitView()
     {
