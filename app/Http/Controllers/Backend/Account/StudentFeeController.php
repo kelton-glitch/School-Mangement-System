@@ -12,8 +12,6 @@ use App\Models\FeeCategoryAmount;
 
 use App\Models\StudentYear;
 use App\Models\StudentClass;
-use App\Models\StudentGroup;
-use App\Models\StudentShift;
 use App\Models\ExamType;
 use DB;
 use PDF;

@@ -10,8 +10,6 @@ use App\Models\DiscountStudent;
 
 use App\Models\StudentYear;
 use App\Models\StudentClass;
-use App\Models\StudentGroup;
-use App\Models\StudentShift;
 use DB;
 use PDF;
 
