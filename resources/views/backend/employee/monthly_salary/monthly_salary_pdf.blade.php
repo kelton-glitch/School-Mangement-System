@@ -38,13 +38,13 @@
 
     <table id="customers">
         <tr>
-            <<td>
-        <h2>
-          <?php $image_path = '/upload/easyschool.png'; ?>
-          <img src="{{ public_path() . $image_path }}" width="200" height="100">
+            <td>
+                <h2>
+                    <?php $image_path = '/upload/easyschool.png'; ?>
+                    <img src="{{ public_path() . $image_path }}" width="200" height="100">
 
-        </h2>
-      </td>
+                </h2>
+            </td>
             <td>
                 <h2>FreshDev School Receipt</h2>
                 <p>School Address</p>
@@ -111,10 +111,10 @@
     </table>
     <br> <br>
     <i style="font-size: 10px; float: right;">Print Data : {{ date("d M Y") }}</i>
-<br> <br>
+    <br> <br>
     <hr style="border: dashed 2px; width: 95%; color: #000000; margin-bottom: 50px">
 
-    
+
 
 
 </body>
