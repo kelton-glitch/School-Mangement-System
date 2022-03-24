@@ -28,9 +28,7 @@ use App\Http\Controllers\Backend\Student\StudentRollController;
 use App\Http\Controllers\Backend\Report\AttenReportController;
 use App\Http\Controllers\Backend\Report\MarkSheetController;
 use App\Http\Controllers\Backend\Report\ProfitController;
-
-
-
+use App\Http\Controllers\Backend\Report\ResultReportController;
 use App\Models\AssignStudent;
 use App\Models\StudentClass;
 use Illuminate\Support\Facades\Route;

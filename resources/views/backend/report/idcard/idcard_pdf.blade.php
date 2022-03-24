@@ -32,10 +32,10 @@
   <img src="{{ public_path() . $image_path }}" width="200" height="100">
 
     </h2></td>
-    <td><h2>Easy School ERP</h2>
+    <td><h2>FreshDev School</h2>
 <p>School Address</p>
 <p>Phone : 343434343434</p>
-<p>Email : support@easylerningbd.com</p>
+<p>Email : freshdev@support.com</p>
 <p> <b>Student ID Card </b> </p>
 
     </td> 
@@ -49,7 +49,7 @@
    
  <tr>
    <td>IMAGE</td>
-   <td>Easy School </td>
+   <td>FreshDev School </td>
    <td> Student Id Card</td>
 
  </tr>  
@@ -77,7 +77,6 @@
 <br> <br>
   <i style="font-size: 10px; float: right;">Print Data : {{ date("d M Y") }}</i>
 
-<hr style="border: dashed 2px; width: 95%; color: #000000; margin-bottom: 50px">
 
  
  
