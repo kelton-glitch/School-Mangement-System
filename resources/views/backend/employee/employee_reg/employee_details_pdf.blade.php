@@ -50,7 +50,7 @@
                 <p>School Address</p>
                 <p>Phone : 343434343434</p>
                 <p>Email : support@freshdev.com</p>
-                <p> <b> Employee Registration Page </b> </p>
+                <p> <b> Employee Registration Details </b> </p>
             </td>
         </tr>
 

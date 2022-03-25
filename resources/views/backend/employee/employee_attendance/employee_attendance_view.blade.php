@@ -41,7 +41,7 @@
 
                                             <td>
                                                 <a href="{{ route('employee.attendance.edit',$value->date) }}" class="btn btn-info">Edit</a>
-                                                <a href="{{ route('employee.attendance.details',$value->date) }}" class="btn btn-danger">Details</a>
+                                                <a href="{{ route('employee.attendance.details',$value->date) }}" class="btn btn-dark">Details</a>
 
                                             </td>
 
