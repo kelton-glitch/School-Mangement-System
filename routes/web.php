@@ -46,6 +46,10 @@ use Laravel\Jetstream\Rules\Role;
 |
 */
 
+Route::group(['middleware' => 'prevent-back-history'],function() {
+    
+
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -59,9 +63,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'])->name('admin.logout');
 
+Route::group(['middleware' => 'auth'],function() {
+
+
+
 // All User Management Routes
 
-Route::get('/user/view', [UserController::class, 'UserView'])->name('user.view');
 
 Route::prefix('users')->group(function () {
 
@@ -406,3 +413,7 @@ Route::prefix('reports')->group(function(){
     Route::get('student/idcard/get', [ResultReportController::class, 'IdcardGet'])->name('report.student.idcard.get');
     
     }); 
+
+}); //End Middleware auth route
+
+}); //Prevent Back Middleware
