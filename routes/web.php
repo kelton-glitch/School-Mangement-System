@@ -30,6 +30,7 @@ use App\Http\Controllers\Backend\Report\MarkSheetController;
 use App\Http\Controllers\Backend\Report\ProfitController;
 use App\Http\Controllers\Backend\Report\ResultReportController;
 use App\Models\AssignStudent;
+use App\Models\SchoolSubject;
 use App\Models\StudentClass;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -58,7 +59,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $user_count = User::all()->count();
     $student_count = AssignStudent::all()->count();
     $class_count = StudentClass::all()->count();
-    return view('admin.index', compact('student_count', 'class_count', 'user_count'));
+    $subjects = SchoolSubject::all()->count();
+    return view('admin.index', compact('student_count', 'class_count', 'user_count', 'subjects'));
 })->name('dashboard');
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'])->name('admin.logout');
