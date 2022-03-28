@@ -76,11 +76,7 @@
       <td>{{ $details['student']['id_no'] }}</td>
     </tr>
 
-    <tr>
-      <td>3</td>
-      <td><b>Student Role</b></td>
-      <td>{{ $details->roll }}</td>
-    </tr>
+    
 
     <tr>
       <td>4</td>
