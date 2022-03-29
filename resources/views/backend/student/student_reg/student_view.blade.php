@@ -121,6 +121,7 @@
 				<td>
 	 <img src="{{ (!empty($value['student']['image']))? url('upload/student_images/'.$value['student']['image']):url('upload/no_image.jpg') }}" style="width: 60px; width: 60px;"> 
 				</td>	
+				
 				<td> {{ $value->year_id }}</td>				 
 				<td>
 <a title="Edit" href="{{ route('student.registration.edit',$value->student_id) }}" class="btn btn-info"> <i class="fa fa-edit"></i> </a>
@@ -151,7 +152,6 @@
 				<th width="5%">SL</th>  
 				<th>Name</th>
 				<th>ID No</th>
-				<th>Roll</th>
 				<th>Year</th>
 				<th>Class</th>
 				<th>Image</th>
@@ -168,7 +168,6 @@
 				<td>{{ $key+1 }}</td>
 				<td> {{ $value['student']['name'] }}</td>
 				<td> {{ $value['student']['id_no'] }}</td>	
-				<td> {{ $value->roll }}  </td>	
 				<td> {{ $value['student_year']['name'] }}</td>	
 				<td>  {{ $value['student_class']['name'] }}</td>	
 				<td>
