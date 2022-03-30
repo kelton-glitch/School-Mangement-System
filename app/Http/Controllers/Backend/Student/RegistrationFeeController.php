@@ -39,7 +39,6 @@ class RegistrationFeeController extends Controller
     	 $html['thsource']  = '<th>SL</th>';
     	 $html['thsource'] .= '<th>ID No</th>';
     	 $html['thsource'] .= '<th>Student Name</th>';
-    	 $html['thsource'] .= '<th>Roll No</th>';
     	 $html['thsource'] .= '<th>Reg Fee</th>';
     	 $html['thsource'] .= '<th>Discount </th>';
     	 $html['thsource'] .= '<th>Student Fee </th>';
@@ -52,7 +51,6 @@ class RegistrationFeeController extends Controller
     	 	$html[$key]['tdsource']  = '<td>'.($key+1).'</td>';
     	 	$html[$key]['tdsource'] .= '<td>'.$v['student']['id_no'].'</td>';
     	 	$html[$key]['tdsource'] .= '<td>'.$v['student']['name'].'</td>';
-    	 	$html[$key]['tdsource'] .= '<td>'.$v->roll.'</td>';
     	 	$html[$key]['tdsource'] .= '<td>'.$registrationfee->amount.'</td>';
     	 	$html[$key]['tdsource'] .= '<td>'.$v['discount']['discount'].'%'.'</td>';
     	 	

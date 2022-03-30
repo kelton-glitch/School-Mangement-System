@@ -73,7 +73,7 @@
                                             <h5>Exam Type <span class="text-danger"> </span></h5>
                                             <div class="controls">
                                                 <select name="exam_type_id" id="exam_type_id" required="" class="form-control">
-                                                    <option value="" selected="" disabled="">Select Class</option>
+                                                    <option value="" selected="" disabled="">Select Exam</option>
                                                     @foreach($exam_type as $exam)
                                                     <option value="{{ $exam->id }}">{{ $exam->name }}</option>
                                                     @endforeach

@@ -62,46 +62,42 @@ $originalfee = $registrationfee->amount;
     <td><b>Student ID No</b></td>
     <td>{{ $details['student']['id_no'] }}</td>
   </tr>
-  <tr>
-    <td>2</td>
-    <td><b>Roll No</b></td>
-    <td>{{ $details->roll }}</td>
-  </tr>
+  
 
     <tr>
-    <td>3</td>
+    <td>2</td>
     <td><b>Student Name</b></td>
     <td>{{ $details['student']['name'] }}</td>
   </tr>
 
   <tr>
-    <td>4</td>
+    <td>3</td>
     <td><b>Father's Name</b></td>
     <td>{{ $details['student']['fname'] }}</td>
   </tr>
   <tr>
-    <td>5</td>
+    <td>4</td>
     <td><b>Session</b></td>
     <td>{{ $details['student_year']['name'] }}</td>
   </tr>
   <tr>
-    <td>6</td>
+    <td>5</td>
     <td><b>Class </b></td>
     <td>{{ $details['student_class']['name'] }}</td>
   </tr>
   <tr>
-    <td>7</td>
+    <td>6</td>
     <td><b>Registration Fee</b></td>
     <td>XAF {{ $originalfee }}</td>
   </tr>
   <tr>
-    <td>8</td>
+    <td>7</td>
     <td><b>Discount Fee </b></td>
     <td>{{ $discount  }} %</td>
   </tr>
 
     <tr>
-    <td>9</td>
+    <td>8</td>
     <td><b>Fee For this Student </b></td>
     <td>XAF {{ $finalfee }}</td>
   </tr>
