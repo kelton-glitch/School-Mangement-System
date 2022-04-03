@@ -75,7 +75,7 @@
 									</div>
 									<!-- /.col -->
 									<div class="col-12 text-center">
-									  <button type="submit" class="btn btn-info btn-rounded margin-top-10">SIGN IN</button>
+									  <button type="submit" class="btn btn-info btn-rounded margin-top-10">SIGNUP</button>
 									</div>
 									<!-- /.col -->
 								  </div>
